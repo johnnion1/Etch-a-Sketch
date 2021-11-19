@@ -5,25 +5,37 @@
         <title>Etch-A-Sketch</title>
         <script src="script.js" defer></script>
         <style>
-            .square {
-                height: 100px;
-                width: 100px;
-                color: blue;
-                background-color: green;
-            }
+        
             #container {
                 background-color: goldenrod;
-                height: 600px;
-                width: 1000px;
+                min-height: 700px;
+                width: 100%;
                 display: flex;
+                flex:0 1 auto;
+            }
+            #grid {
                 
             }
+            .square {
+                height: 80px;
+                width: 80px;
+                background-color: darkcyan;
+                border-radius: 5%;
+                margin: 5px;
+                
+
+            }
+            
+            
+
         </style>
     </head>
 
 
     <body>
-<div id="container"></div>
+<div id="container">
+    <div id="grid"></div>
+    </div>
 
     </body>
 
