@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inline block testing</title>
+        <style>
+            .square {
+                background-color: blue;
+                margin: 1px;
+              display:inline-block;/* 
+             margin-right: 1px; */
+            }
+        </style>
+    </head>
+    <body>
+
+
+
+        <div class="container">
+    
+</div>
+
+
+
+<script>
+    let xValue = +prompt("Select x dimension squares:\n", '5');
+    let yValue = +prompt("Select y dimension squares", '4');
+    
+    const container = document.querySelector('.container');
+
+    container.setAttribute('style', 'background-color: lightblue; height: 700px; width: 700px');
+
+    let conHeight = container.style.height; //takes 700 "PX" and not just 700. thus sqHeigth calc  doesnt work
+   
+    
+    let sum = xValue * yValue;
+
+   /*  let sqHeight = container.style.height/yValue -4; 
+    let sqWidth = container.style.width/xValue -4; */
+    
+    let sqSideLength = 700/yValue -5;
+
+    function runGrid() {
+        while(sum > 0) {
+            const square = document.createElement('div');
+            square.classList.add('square')
+            square.style.width = sqSideLength + 'px';
+            square.style.height = sqSideLength + 'px';
+            /* 
+            console.log(square.style.height); */
+
+            container.appendChild(square);
+            sum--;
+        }
+    }
+    runGrid();
+
+</script>
+
+
+
+</body>
+</html>
